@@ -1,0 +1,7 @@
+{
+  "baseUrl" : "https://next.privat24.ua",
+  "ignoreTestFiles": "**/examples/*",
+  "viewportWidth": 1080,
+  "viewportHeight": 720
+}
+
