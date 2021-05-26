@@ -36,34 +36,30 @@ it.skip('Money transfer between foreign cards', () => {
 
 });
 
-it('Example sending the GET request ', () => {
+it.skip('Example sending the GET request ', () => {
     cy.request('https://next.privat24.ua')
         .then((response) => {
-            console.log( response);
+            console.log(response);
         })
 });
 
-it('Example sending the POST request ', () => {
+it.skip('Example sending the POST request ', () => {
 
     const requestBody = {
-        "action": "add",
+        "action": "info",
         "phone": "+380665424680",
         "amount": 50,
         "currency": "UAH",
-        "cardCvv": "111",
+        "cardCvv": "444",
         "card": "4552331448138217",
         "cardExp": "0524",
-        "operator": "Vodafone",
-        "operatorId": "601",
-        "xref": "55f35b2b009418c605376329ab6f85e1",
-        "_": 1618920013762
+        "xref": "ba9d22f2a188919041ad2de3f86c21dd",
+        "_": 1621515089743
     }
 
     const headersData = {
-        cookie: '_ga=GA1.2.1820646181.1617815081; _gid=GA1.2.1008443824.1618907457; pubkey=6bd0904811f91bb86bd249e4002e8daf; lfp=4/7/2021, 8:04:52 PM; pa=1618488695347.19480.35855118792213325next.privat24.ua0.7345577283405427+10; fp=40'
+        cookie: '_ga=GA1.2.1820646181.1617815081; _gid=GA1.2.2027916834.1621514661; pubkey=863589768c148cec1d34aca44497fe50; _gat_gtag_UA_29683426_11=1; fp=43; lfp=4/7/2021, 8:04:52 PM; pa=1621515071621.71630.24772195076598913next.privat24.ua0.6283673238138388+1'
     }
-
-
 
 
     cy.request({
@@ -72,11 +68,53 @@ it('Example sending the POST request ', () => {
         body: requestBody,
         headers: headersData
     }).then((response) => {
-            console.log(response);
-            console.log(response.body);
-            const some = response.headers;
-            console.log(some)
-
-        })
+        console.log(response.body);
+    })
 });
+
+it.skip('Test POST', ()=>{
+
+    const testBody = {
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }
+
+    const testHeaderData = {
+        'Content-type': 'application/json; charset=UTF-8',
+    }
+
+    cy.request({
+        method: 'POST',
+        url: 'https://jsonplaceholder.typicode.com/posts',
+        body: testBody,
+        headers: testHeaderData
+    }).then((responce) => {
+        console.log(responce.body)
+    })
+
+})
+
+it('Test update', ()=>{
+
+    const testHeader = {
+        'Content-type': 'application/json; charset=UTF-8'
+    }
+
+    const testBody = {
+        id: 1,
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }
+
+    cy.request({
+        method: 'PUT',
+        url: 'https://jsonplaceholder.typicode.com/posts/1',
+        body: testBody,
+        headers: testHeader
+    }).then((responce) =>{
+        console.log(responce.body)
+    })
+})
 
