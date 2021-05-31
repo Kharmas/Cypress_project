@@ -22,6 +22,9 @@ export class BasePage {
         cy.get('button[type="submit"]')
             .click()
     }
+    getCookies(){
+        cy.getCookie('session_id')
+    }
 
 
 }

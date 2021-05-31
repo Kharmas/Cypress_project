@@ -1,0 +1,50 @@
+{
+  "task_id": "cache",
+  "status": "success",
+  "data": [
+    {
+      "state": "b",
+      "paymentTypeCode": "P24MBS",
+      "paymentType": "mobipay",
+      "moduleReference": "MBPA1081457124",
+      "moduleId": "P24A",
+      "error": {
+        "code": "",
+        "description": ""
+      },
+      "details": "Поповнення телефону. На номер +380665424680",
+      "date": "30.05.2021 19:29:28",
+      "currency": "UAH",
+      "amount": 5.0,
+      "additionalData": {
+        "phone": "+380665424680",
+        "reference": "1081457124"
+      },
+      "payer": {
+        "name": "КОЗАР АРТЕМ ЕВГЕНИЕВИЧ",
+        "currency": "UAH",
+        "crf": "",
+        "commission": 2.0,
+        "bank": "",
+        "amount": 5.0,
+        "account": {
+          "id": "",
+          "number": "5457082237466599"
+        }
+      },
+      "receiver": {
+        "name": "+380665424680",
+        "mfo": "",
+        "currency": "UAH",
+        "crf": "",
+        "commission": 0.0,
+        "bank": "",
+        "amount": 5.0,
+        "account": {
+          "id": "",
+          "number": "29248800002004"
+        }
+      }
+    }
+  ]
+}
